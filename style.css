@@ -20,11 +20,14 @@ body {
   justify-content: center;
   height:100vh;
   margin: 0;
+  font-size: 11px;
+}
+
+.container {
   animation: filterGray 1s forwards 1s;
   filter: grayscale(100%);
   user-select: none;
   padding: 0 2em;
-  font-size: 11px;
 }
 
 #page-title {
@@ -111,8 +114,8 @@ body {
     padding: 0;
     font-size: 15px;
   }
-/*
-  .text-emoji {
+
+  /* .text-emoji {
     display: inline;
   } */
 
