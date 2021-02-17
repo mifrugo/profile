@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=JetBrains+Mono:wght@200;700&display=swap');
 
 :root {
-  --background-color: #fff;
   --secondary-color: #0d0e0b;
+  --white: #fff;
+  --wine: #552841;
+  --background-color: var(--white);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #0d0e0b;
-    --secondary-color: #fff;
+    --secondary-color: var(--white);
   }
 }
 
@@ -95,8 +97,8 @@ body {
 } */
 
 .btn-email {
-  background-color: var(--secondary-color);
-  color: var(--background-color);
+  background-color: var(--wine);
+  color: var(--white);
   padding: .4em;
   font-size: 1.5em;
   margin-top: .5em;
