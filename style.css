@@ -20,7 +20,8 @@ body {
   justify-content: center;
   height:100vh;
   margin: 0;
-  /* animation: filterGray 1s forwards; */
+  animation: filterGray 1s forwards 1s;
+  filter: grayscale(100%);
   user-select: none;
   padding: 0 2em;
   font-size: 11px;
@@ -29,6 +30,7 @@ body {
 #page-title {
   font-family: 'JetBrains Mono', monospace;
   font-size: 2.5em;
+  line-height: 1.5em;
 }
 
 #page-title > .text-name {
@@ -72,15 +74,16 @@ body {
 }
 
 .link-lewagon {
-  background-color: rgba(253, 16, 21, .7);
-  color: var(--secondary-color);
+  background-color: #ffe0e1;
+  color: rgb(253, 16, 21);
   padding: .1em .4em;
-  transition: background-color .5s ease-out;
+  /* transition: background-color .5s ease-out; */
+  /* vertical-align: middle; */
 }
 
-.link-lewagon:hover {
+/* .link-lewagon:hover {
   background-color: rgba(253, 16, 21, 1);
-}
+} */
 
 .btn-email {
   background-color: var(--secondary-color);
@@ -89,7 +92,7 @@ body {
   font-size: 1.5em;
   margin-top: .5em;
   display: inline-block;
-  transition: opacity ease-in-out 1s;
+  transition: opacity ease-in 1s;
   opacity: .6;
   /* animation: moveButton 2s forwards; */
 }
@@ -108,10 +111,10 @@ body {
     padding: 0;
     font-size: 15px;
   }
-
+/*
   .text-emoji {
     display: inline;
-  }
+  } */
 
   .btn-email {
     font-size: inherit;
@@ -119,10 +122,14 @@ body {
 
 }
 
-@keyframes filterGray {
- from {
-    filter: grayscale(100%)
+@media (orientation: landscape)
+      and (max-device-height: 600px) {
+  img {
+    display: none;
   }
+}
+
+@keyframes filterGray {
   to {
     filter: grayscale(10%)
   }
